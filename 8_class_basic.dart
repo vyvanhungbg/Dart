@@ -1,5 +1,5 @@
 class SinhVien {
-  late String ten;
+  late String _ten;   // late để khi các biến được dùng thì ct mới khởi tạo ! tránh báo lôiz có thẻ null
   late int diem;
   late double heso;
 
@@ -11,19 +11,21 @@ class SinhVien {
 
   SinhVien([String ten = '', int diem = 0, double heso = 0]) {
     // su dung dau [] giup có thể cho phép truyền thiếu đối số
-    this.ten = ten;
+    this._ten = ten;
     this.diem = diem;
     this.heso = heso;
   }
 
-  get getTen => this.ten;
+  get getTen => this._ten;
 
   set setTen(String ten) {
-    this.ten = ten;
+    this._ten = ten;
   }
 
   tinhTB() => diem * heso;
 }
+
+
 
 main(List<String> args) {
   SinhVien x = new SinhVien();
@@ -32,10 +34,10 @@ main(List<String> args) {
 
   SinhVien y =
       SinhVien('hung', 8, 2.5); // khai bao k can tu khoa new van chap nhan
-  print('Diem cua sinh vien ${x.ten} la : ${x.tinhTB()}');
-  print('Diem cua sinh vien ${y.ten} la : ${y.tinhTB()}');
-  x.ten = 'hung';
+  print('Diem cua sinh vien ${x._ten} la : ${x.tinhTB()}');
+  print('Diem cua sinh vien ${y._ten} la : ${y.tinhTB()}');
+  x._ten = 'hung';
 
 
-  print('Diem cua sinh vien ${x.ten} la : ${x.tinhTB()}');
+  print('Diem cua sinh vien ${x._ten} la : ${x.tinhTB()}');
 }

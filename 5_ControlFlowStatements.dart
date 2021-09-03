@@ -1,5 +1,7 @@
 import 'dart:io';
 
+import 'dart:math';
+
 main(List<String> args) {
   num number = 100;
 
@@ -36,7 +38,16 @@ main(List<String> args) {
 
   List myList = ['hung', 'long', 'vinh'];
 
-  for (String item in myList) print(item);
+  //for (String item in myList) print(item);
+
+  // foreach nhanh
+  myList.forEach(print);
+
+// break , continue tương tự
+
+// assert(dieu  kien , mess)
+  int test = 999;
+  assert(test < 100);
 
 // input and output
 
@@ -47,7 +58,6 @@ main(List<String> args) {
   int? inputNumber = int.parse(stdin.readLineSync()!);
 
   stdout.write('input number = $inputNumber');
-
 
   // => stdout.write thì con trỏ k xuống dòng , print thì con trỏ xuống dòng
 }
