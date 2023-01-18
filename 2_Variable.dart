@@ -12,7 +12,7 @@ main(List<String> args) {
 
   print(nguyen);
   print(thuc);
- 
+
   // cu the
   int soNguyen = 123;
   double soThuc = 3.4665;
@@ -30,10 +30,38 @@ main(List<String> args) {
   print(id);
 
   // linh dong kieu dynamic danh cho chuỗi , boolean, số
+
   dynamic ten = 'hung';
   dynamic soNha = 567;
   print(ten);
-  print(soNha);
+  print(soNha.runtimeType);
+
+  
+// Khởi tạo giá trị mặc định
+  //  int noInit; // một biến luôn phải được khởi tạo trước khi sử dụng nếu không sẽ báo lỗi
+  // print(noInit); xảy ra lỗi
+
+  // int? noInit; nếu khai báo biến đó là nullable thì biến đó ngầm mang giá trị null có thể sử dụng nhưng mang giá trị null
+
+  // dynamic cũng có giá trị ngầm định là null
+  // dynamic noInit;
+  // print("giá trị là noInit = $noInit");
+
+  // => Vì kiểu int.. là dạng object nên trong dart biến dynamic có gt mặc định là null , object thì không có gt mặc định
+  // cần khai báo trước khi sd
+
+
+// late variable khởi tạo sau mục đích chính là sử dụng các biến non-nullable khởi tạo sau
+  // // báo lỗi initilizer nếu chưa khởi tạo mà sử dụng
+  // late int lateVariable;
+  // // lateVariable=4;
+  // print("lateVariable = $lateVariable");
+
+  // lưu ý late nếu gán giá trị luôn trong lúc khai báo với late thì chỉ khi nào biến đó được gọi trình biên dịch mới gán , hoặc thực thi
+    //  điều này có ích khi hàm được gán thực hiện lâu .. tốn nhiều thời gian .hashCode
+
+    // late binding = funcGetBinding() => hàm funcGetBinding sẽ không bao giờ được gọi nếu biến binding không được sử dụng
+
 
   // kieu var dùng cho chuoix or số  , KHÔNG DÙNG LÀM KIỂU TRẢ VỀ
   var text = 'hung';
@@ -60,4 +88,21 @@ main(List<String> args) {
   // Set , Sysbols 
 
   // 1-9-21
+
+// khác nhau giữa var và dynamic
+    // Nếu khai báo bằng từ khóa var và gán giá trị mặc định cho kiểu dữ liệu đó thì biến sẽ có giá trị mặc định đó
+    // Nếu khai báo biến từ khóa var  mà không khởi tạo giá trị mặc định thì biến có kiểu dynamic
+
+    // var danh;
+    // print(danh.runtimeType);
+
+// khacs nhau giữa const và final
+  // khai báo hằng số sử dụng const
+
+  // khai báo biến sử dụng 1 lần và không thay đổi ta sử dụng từ khóa final
+
+  // const hằng số trong lúc biên dịch , final là hằng số trong lúc runtime
+  final a;
+  a=4;
+  print(a); //4
 }
