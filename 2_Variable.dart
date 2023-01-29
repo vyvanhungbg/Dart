@@ -7,20 +7,23 @@ main(List<String> args) {
   print(name + " \n" + address);
 
   // num thao tác với số
-  num nguyen = 10;
-  num thuc = 1.99999000;
+    num nguyen = 10;
+    num thuc = 1.99999000;
 
-  print(nguyen);
-  print(thuc);
+    print(nguyen);
+    print(thuc);
 
-  // cu the
-  int soNguyen = 123;
-  double soThuc = 3.4665;
-  print(soNguyen);
-  print(soThuc);
-  //  ==> su dung các phương thức toInt(), toString chuyển đổi qua lại
+    // cu the
+    int soNguyen = 123;
+    //soNguyen+=2.3; // báo lỗi vì biến đang ở số nguyên nên không thể cộng thêm kiểu double để luuw trữ đc
 
-  //
+  nguyen+=2.3;// với biến nguyen kiểu num thì có thể cộng được 
+    double soThuc = 3.4665;
+    print(soNguyen);
+    print(soThuc);
+    //  ==> su dung các phương thức toInt(), toString chuyển đổi qua lại
+
+    //
 
   bool isCheckTrue = true;
 
@@ -84,14 +87,20 @@ main(List<String> args) {
   var map = {'T2': 'Thu 2', 'T3': 'Thu 3'};
   print(map['T2']);
   
+  // enum
+
 
   // Set , Sysbols 
 
   // 1-9-21
 
 // khác nhau giữa var và dynamic
-    // Nếu khai báo bằng từ khóa var và gán giá trị mặc định cho kiểu dữ liệu đó thì biến sẽ có giá trị mặc định đó
+    // Nếu khai báo bằng từ khóa var và gán giá trị mặc định cho kiểu dữ liệu đó thì biến sẽ kiểu giá trị mặc định đó
     // Nếu khai báo biến từ khóa var  mà không khởi tạo giá trị mặc định thì biến có kiểu dynamic
+
+    // var     : không thể thay đổi LOẠI của biến, nhưng có thể thay đổi GIÁ TRỊ của biến sau này trong mã.
+    // dynamic : có thể thay đổi LOẠI của biến và có thể thay đổi GIÁ TRỊ của biến sau này trong mã.
+    // final : không thể thay đổi LOẠI của biến và không thể thay đổi GIÁ TRỊ của biến sau này trong mã.
 
     // var danh;
     // print(danh.runtimeType);
@@ -102,7 +111,9 @@ main(List<String> args) {
   // khai báo biến sử dụng 1 lần và không thay đổi ta sử dụng từ khóa final
 
   // const hằng số trong lúc biên dịch , final là hằng số trong lúc runtime
-  final a;
-  a=4;
-  print(a); //4
+
+  // final kiểu [] sẽ vẫn add , remove được element nhưng k gán được biến mới
+  // const thì ko thể add hoặc thêm phần tử , cả gán list
+
+  //print(a); //4
 }
