@@ -113,7 +113,7 @@ main(List<String> args) {
   // const hằng số trong lúc biên dịch , final là hằng số trong lúc runtime
 
   // final kiểu [] sẽ vẫn add , remove được element nhưng k gán được biến mới
-  // const thì ko thể add hoặc thêm phần tử , cả gán list
+  // const thì ko thể add hoặc thêm phần tử , ke cả gán list
 
   //print(a); //4
 }
